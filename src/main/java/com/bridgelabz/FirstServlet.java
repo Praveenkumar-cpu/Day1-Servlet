@@ -8,15 +8,14 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet("/FirstServlet")
-public class FirstServlet extends HttpServlet {
-
-    @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.doGet(req, resp);
-        resp.setContentType("text/html");
-        PrintWriter out = resp.getWriter();
-        out.println("<h3>Hello Welcome to Servlet Programming");
-        out.close();
+    @WebServlet("/firstServlet")
+    public class FirstServlet extends HttpServlet {
+        @Override
+        protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+            resp.setContentType("text/html");
+            PrintWriter out = resp.getWriter();
+            out.println("<h3>Hello world my first servlet page </h3>");
+            out.close();
+        }
     }
-}
+
